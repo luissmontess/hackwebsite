@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@theme {
+    --font-primary: "Oswald", "sans-serif";
+}
+
 @keyframes rotate {
     0% {
         transform: rotate(0deg);
@@ -19,3 +23,5 @@
 html {
     scroll-behavior: smooth;
 }
+
+

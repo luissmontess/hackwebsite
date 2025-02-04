@@ -29,9 +29,9 @@ const TalaveraBackground = ({ children }: { children: React.ReactNode }) => {
         <div
             className="absolute top-0 left-0 w-full h-full -z-10 bg-slate-200"
             style={{
-            display: "grid",
-            gridTemplateRows: `repeat(${grid.rows}, 50px)`,
-            gridTemplateColumns: `repeat(${grid.cols}, 50px)`,
+                display: "grid",
+                gridTemplateRows: `repeat(${grid.rows}, 50px)`,
+                gridTemplateColumns: `repeat(${grid.cols}, 50px)`,
             }}
         >
             {shapeGrid.map((block, index) => (
