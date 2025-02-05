@@ -29,8 +29,8 @@ const Header = () => {
                 </a>
               </li>
               <li>
-                <a href="#contact" className="font-bold hover:text-blue-400 transition-colors">
-                  Contact
+                <a href="#faq" className="font-bold hover:text-blue-400 transition-colors">
+                  FAQ
                 </a>
               </li>
               {/* Instagram Icon in the Nav List */}
