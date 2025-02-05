@@ -52,7 +52,7 @@ export default function About() {
                     : "bg-gray-700 text-gray-300 hover:bg-gray-600"
                 }`}
                 >
-                Normal Info
+                    Info
                 </button>
                 <button
                 onClick={() => setSelectedTab("tecbytes")}
