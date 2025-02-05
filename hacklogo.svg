@@ -1,0 +1,9 @@
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" fill="none">
+    <!-- Background -->
+    <rect width="300" height="300" fill="white"/>
+    
+    <!-- Code Symbol -->
+    <text x="90" y="180" font-family="Arial, sans-serif" font-size="180" font-weight="bold" fill="#007BFF" text-anchor="middle" alignment-baseline="middle">&lt;</text>
+    <text x="150" y="180" font-family="Arial, sans-serif" font-size="180" font-weight="bold" fill="#FF9900" text-anchor="middle" alignment-baseline="middle">/</text>
+    <text x="210" y="180" font-family="Arial, sans-serif" font-size="180" font-weight="bold" fill="#FF0000" text-anchor="middle" alignment-baseline="middle">&gt;</text>
+</svg>
