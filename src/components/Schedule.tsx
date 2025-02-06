@@ -22,6 +22,7 @@ export default function Schedule() {
             className="min-h-screen flex flex-col items-center justify-center text-center px-4 sm:px-8 py-16 bg-gray-50"
         >
             {/* <h2 className="text-3xl font-bold text-gray-800 mb-6">Schedule</h2> */}
+            <div className="mt-10"></div>
             <div className="mt-2"></div>
             {/* Two Columns for Schedule */}
             <div className="relative w-full max-w-6xl flex gap-6">

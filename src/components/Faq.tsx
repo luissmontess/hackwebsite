@@ -30,6 +30,7 @@ export default function Faq() {
             id="faq" 
             className="min-h-screen flex flex-col items-center text-center px-4 sm:px-8 py-16 bg-gray-50"
         >
+            <div className="mt-10"></div>
             <h2 className="text-3xl font-bold text-gray-800 mb-8 mt-5">FAQ</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl w-full">
                 {faqs.map((faq, index) => (
