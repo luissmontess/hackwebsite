@@ -3,7 +3,7 @@ import { useState } from "react";
 const faqs = [
     {
         question: "¿Cómo puedo registrarme en el hackathon?",
-        answer: "Puedes registrarte visitando nuestra página de registro y completando el formulario con tus datos.",
+        answer: "Puedes registrarte visitando nuestra página de registro y completando el formulario con tus datos",
     },
     {
         question: "¿Cuánto cuesta participar?",
