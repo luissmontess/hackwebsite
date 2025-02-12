@@ -59,7 +59,7 @@ function App() {
         >
           <div className="mt-10"></div>
           <div className="p-2 bg-[rgba(226,232,240,0.9)] rounded-2xl shadow-2xl">
-            <img src={`${import.meta.env.BASE_URL}/logo_hack_est.png`} alt="TecBytes Logo" className="mx-auto w-72 sm:w-96 mb-4" />
+            <img src={`../public/logo_hack_est.png`} alt="TecBytes Logo" className="mx-auto w-72 sm:w-96 mb-4" />
           </div>
 
           {/* Conditional Rendering */}
