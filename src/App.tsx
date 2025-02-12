@@ -67,7 +67,7 @@ function App() {
             /* Only show date centered */
             <div className="w-full flex items-center justify-center text-slate-800 bg-slate-200 p-6 text-center">
               <p className="text-3xl sm:text-5xl font-extrabold font-primary">
-                June 18 - 19, 2025
+                June 17 - 18, 2025
               </p>
             </div>
           ) : (
