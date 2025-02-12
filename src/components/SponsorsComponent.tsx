@@ -5,7 +5,7 @@ import { Tilt } from "react-tilt"
 export default function SponsorsComponent() {
     const sponsors = [
         { name: "Logo 2", image: "ellucian_logo.png" },
-        { name: "Logo 3", image: "ellucian_logo.png" },
+        { name: "Logo 3", image: "syntaxlogo.png" },
         { name: "Logo 1", image: "ellucian_logo.png" },
         { name: "Logo 4", image: "ellucian_logo.png" },
         { name: "Logo 5", image: "ellucian_logo.png" },
