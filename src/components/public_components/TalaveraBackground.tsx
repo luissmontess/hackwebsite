@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { generateShapeGrid } from "../helpers/shape_functions";
+import { generateShapeGrid } from "../../helpers/shape_functions";
 import Shape from "./shape";
 
 const TalaveraBackground = ({ children }: { children: React.ReactNode }) => {
