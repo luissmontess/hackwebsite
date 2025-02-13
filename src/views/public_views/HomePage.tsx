@@ -22,14 +22,14 @@ export default function HomePage() {
         const difference = eventDate - now;
 
         if (difference <= 0) {
-        return { days: 0, hours: 0, minutes: 0, seconds: 0 }; // Event has started
+            return { days: 0, hours: 0, minutes: 0, seconds: 0 }; // Event has started
         }
 
         return {
-        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((difference / (1000 * 60)) % 60),
-        seconds: Math.floor((difference / 1000) % 60),
+            days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+            hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+            minutes: Math.floor((difference / (1000 * 60)) % 60),
+            seconds: Math.floor((difference / 1000) % 60),
         };
     }
 
@@ -38,10 +38,10 @@ export default function HomePage() {
         {/* Hero Section */}
         <TalaveraBackground>
             <section
-            id="hero"
-            className="min-h-screen flex flex-col items-center justify-center text-center px-4 sm:px-8 "
+                id="hero"
+                className="min-h-screen flex flex-col items-center justify-center text-center px-4 sm:px-8 "
             >
-            <div className="p-2 bg-[rgba(226,232,240,0.9)] rounded-2xl shadow-2xl">
+            <div className="p-2 bg-[rgba(226,232,240,0.9)] mt-2 rounded-2xl shadow-2xl">
                 {/* <img src="/hack_logo_bgrm2.png" alt="TecBytes Logo" className="mx-auto w-72 sm:w-96 mb-4" /> */}
                 <img src="/logo_hack_est.png" alt="TecBytes Logo" className="mx-auto w-72 sm:w-96 mb-4" />
             </div>
