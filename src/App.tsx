@@ -76,7 +76,7 @@ function App() {
               {/* Event Date */}
               <div className="w-full bg-slate-200 flex items-center justify-center text-slate-800 p-6">
                 <p className="text-3xl sm:text-5xl font-extrabold font-primary">
-                  June 18 - 19, 2025
+                  June 17 - 18, 2025
                 </p>
               </div>
 
