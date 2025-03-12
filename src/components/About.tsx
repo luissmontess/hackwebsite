@@ -18,6 +18,12 @@ export default function About() {
           description: "Supports the president and oversees club initiatives and outreach."
         },
         {
+            name: "Armando Mac Beath",
+            role: "Hack Organizer",
+            image_name: `luismontes_member.png`,
+            description: "Main responsable on the organization of the hack, as well as answering all your doubts."
+          },
+        {
           name: "Alejandro Zurita",
           role: "Treasurer",
           image_name: `luismontes_member.png`,
