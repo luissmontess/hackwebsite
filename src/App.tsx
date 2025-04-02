@@ -9,8 +9,35 @@ import Faq from "./components/Faq";
 import SponsorsComponent from "./components/SponsorsComponent";
 import './App.css';
 
+const MLHTrustBadge = () => {
+  return (
+    <a
+      id="mlh-trust-badge"
+      style={{
+        display: "block",
+        maxWidth: "120px",
+        minWidth: "60px",
+        position: "fixed",
+        left: "50px",
+        top: "0",
+        width: "40%",
+        zIndex: "10000"
+      }}
+      href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2025-season&utm_content=blue"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img
+        src="https://s3.amazonaws.com/logged-assets/trust-badge/2025/mlh-trust-badge-2025-blue.svg"
+        alt="Major League Hacking 2025 Hackathon Season"
+        style={{ width: "100%" }}
+      />
+    </a>
+  );
+};
+
 function App() {
-  const eventDate = new Date("2025-06-18T00:00:00").getTime();
+  const eventDate = new Date("2025-06-14T00:00:00").getTime();
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 900);
 
@@ -36,7 +63,7 @@ function App() {
     const difference = eventDate - now;
 
     if (difference <= 0) {
-      return { days: 0, hours: 0, minutes: 0, seconds: 0 }; // Event has started
+      return { days: 0, hours: 0, minutes: 0, seconds: 0 };
     }
 
     return {
@@ -50,6 +77,7 @@ function App() {
   return (
     <>
       <Header />
+      <MLHTrustBadge />
 
       {/* Hero Section */}
       <TalaveraBackground>
@@ -62,25 +90,19 @@ function App() {
             <img src={`logo_hack_est.png`} alt="TecBytes Logo" className="mx-auto w-72 sm:w-96 mb-4" />
           </div>
 
-          {/* Conditional Rendering */}
           {isSmallScreen ? (
-            /* Only show date centered */
             <div className="w-full flex items-center justify-center text-slate-800 bg-slate-200 p-6 text-center">
               <p className="text-3xl sm:text-5xl font-extrabold font-primary">
-                June 17 - 18, 2025
+                June 14 - 15, 2025
               </p>
             </div>
           ) : (
-            /* Show both date and countdown */
             <div className="mt-6 flex w-full max-w-4xl rounded-lg shadow-2xl overflow-hidden">
-              {/* Event Date */}
               <div className="w-full bg-slate-200 flex items-center justify-center text-slate-800 p-6">
                 <p className="text-3xl sm:text-5xl font-extrabold font-primary">
-                  June 17 - 18, 2025
+                  June 14 - 15, 2025
                 </p>
               </div>
-
-              {/* Countdown Timer */}
               <div className="w-1/2 bg-slate-800 flex items-center justify-center p-6">
                 <div className="flex space-x-4 text-3xl text-slate-200 font-bold">
                   <CountdownBox label="Days" value={timeLeft.days} />
@@ -97,7 +119,6 @@ function App() {
         </section>
       </TalaveraBackground>
 
-      {/* Other Sections */}
       <About />
       <Schedule />
       <SponsorsComponent />
