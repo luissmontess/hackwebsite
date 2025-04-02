@@ -44,7 +44,7 @@ export default function ScrollColumn({ title, data } : ScrollProps) {
             {/* Scrollable Schedule List */}
             <div
                 ref={scrollRef}
-                className="w-full max-h-[500px] overflow-y-scroll scrollbar-hide p-4 bg-white rounded-lg shadow-lg"
+                className="w-full max-h-[540px] overflow-y-scroll scrollbar-hide p-4 bg-white rounded-lg shadow-lg"
             >
                 {data.map((event, index) => (
                     <ScrollCard key={index} hour={event.hour} title={event.title} description={event.description} />

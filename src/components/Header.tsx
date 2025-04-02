@@ -7,11 +7,12 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 w-full bg-slate-900 text-white py-4 px-8 shadow-lg z-50">
       <div className="container mx-auto flex justify-between items-center">
-        <h1 className="text-2xl pl-50 font-bold">
-          Hack<span className="font-primary text-blue-400">Puebla0111</span>
+        {/* Logo */}
+        <h1 className="text-2xl font-bold">
+          Hack<span className="text-blue-400">Puebla0111</span>
         </h1>
 
-        {/* Hamburger Button (only shows on md and below) */}
+        {/* Hamburger Menu Button */}
         <button
           className="md:hidden text-white focus:outline-none"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -27,7 +28,7 @@ const Header = () => {
           }`}
         >
           <ul className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6 text-center md:text-left">
-            {[
+            {[ 
               { name: "Home", link: "#hero" },
               { name: "About", link: "#about" },
               { name: "Schedule", link: "#schedule" },
@@ -44,6 +45,20 @@ const Header = () => {
                 </a>
               </li>
             ))}
+
+            {/* Registration Button */}
+            <li>
+              <div
+                className="px-4 py-1 bg-blue-500 text-white font-bold rounded-lg hover:bg-blue-600 transition block"
+                
+              >
+                <a href="https://events.mlh.io/events/12506-hackpue" target="_blank">
+                Register
+                </a>
+              </div>
+            </li>
+
+            {/* Instagram Icon */}
             <li>
               <a
                 href="https://www.instagram.com/hackpuebla"

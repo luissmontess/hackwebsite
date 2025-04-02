@@ -35,12 +35,12 @@ export default function About() {
           image_name: `members/anto.jpeg`,
           description: "Handles social media, branding, and promotional campaigns for TecBytes."
         },
-        {
-          name: "Ivonne Hernández",
-          role: "Public Relations",
-          image_name: `luismontes_member.png`,
-          description: "Oversees software development and technical projects within TecBytes."
-        }
+        // {
+        //   name: "Ivonne Hernández",
+        //   role: "Public Relations",
+        //   image_name: `luismontes_member.png`,
+        //   description: "Oversees software development and technical projects within TecBytes."
+        // }
     ];
     
     return (
