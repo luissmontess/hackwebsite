@@ -8,31 +8,31 @@ export default function About() {
         {
           name: "Luis Montes",
           role: "President",
-          image_name: `luismontes_member.png`,
+          image_name: `members/luismontes_member.png`,
           description: "Leader of TecBytes, responsible for organizing events and managing the team."
         },
         {
           name: "Joselyn Espinoza",
           role: "Vice President",
-          image_name: `luismontes_member.png`,
+          image_name: `members/joss.jpeg`,
           description: "Supports the president and oversees club initiatives and outreach."
         },
         {
             name: "Armando Mac Beath",
-            role: "Hack Organizer",
-            image_name: `luismontes_member.png`,
+            role: "HackPue Organizer",
+            image_name: `members/armando.jpg`,
             description: "Main responsable on the organization of the hack, as well as answering all your doubts."
           },
         {
           name: "Alejandro Zurita",
           role: "Treasurer",
-          image_name: `luismontes_member.png`,
+          image_name: `members/zurita.jpeg`,
           description: "Manages the financial aspects of TecBytes, including sponsorships and budgeting."
         },
         {
           name: "Antonieta Rodriguez",
           role: "Social Responsiblity Lead",
-          image_name: `luismontes_member.png`,
+          image_name: `members/anto.jpeg`,
           description: "Handles social media, branding, and promotional campaigns for TecBytes."
         },
         {
