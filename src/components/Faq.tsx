@@ -1,4 +1,5 @@
 import { useState } from "react";
+import LiquidGlass from "liquid-glass-react";
 
 const faqs = [
     {
@@ -31,8 +32,9 @@ export default function Faq() {
             id="faq"
             className="pt-8 pb-32 flex flex-col items-center text-center px-4 sm:px-8 bg-gray-50"
         >
-            <h2 className="text-3xl font-bold text-gray-800 mb-8">FAQ</h2>
-
+            <div>
+                <h2 className="text-3xl font-bold text-gray-800 mb-8">FAQ</h2>
+            </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl w-full">
                 {faqs.map((faq, index) => (
                     <div key={index} className="w-full">
@@ -50,11 +52,10 @@ export default function Faq() {
                         </button>
 
                         <div
-                            className={`transition-all duration-500 overflow-hidden ${
-                                openIndex === index
+                            className={`transition-all duration-500 overflow-hidden ${openIndex === index
                                     ? "max-h-40 opacity-100 p-4 bg-white rounded-lg shadow-xl mt-2"
                                     : "max-h-0 opacity-0"
-                            }`}
+                                }`}
                         >
                             <p className="text-gray-700">{faq.answer}</p>
                         </div>

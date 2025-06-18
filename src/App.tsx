@@ -7,6 +7,7 @@ import Schedule from './components/Schedule';
 import CountdownBox from './components/CountdownBox';
 import Faq from './components/Faq';
 import SponsorsComponent from './components/SponsorsComponent';
+import LiquidGlass from 'liquid-glass-react';
 import './App.css';
 
 // Definimos la estructura del tiempo restante
@@ -84,7 +85,7 @@ function calculateTimeLeft(eventDate: number): TimeLeft {
 
 // Componente principal de la App
 const App: React.FC = () => {
-  const eventDate = new Date('2025-06-14T00:00:00').getTime();
+  const eventDate = new Date('2025-08-15T10:00:00').getTime();
   const [timeLeft, setTimeLeft] = useState<TimeLeft>(calculateTimeLeft(eventDate));
   const [isSmallScreen, setIsSmallScreen] = useState<boolean>(window.innerWidth <= 900);
 
@@ -117,40 +118,38 @@ const App: React.FC = () => {
           className="min-h-screen flex flex-col items-center justify-center text-center px-4 sm:px-8"
         >
           <div className="mt-10"></div>
-          <div className="p-2 bg-[rgba(226,232,240,0.9)] rounded-2xl shadow-2xl">
+          {/* LOGO CON FONDO DE VIDRIO */}
+          <div className="p-4 bg-white/20 backdrop-blur-lg rounded-2xl shadow-2xl border border-white/30 mb-6">
             <img
               src="logo_hack_est.png"
               alt="TecBytes Logo"
-              className="mx-auto w-72 sm:w-96 mb-4"
+              className="mx-auto w-72 sm:w-96"
             />
           </div>
 
-          {isSmallScreen ? (
-            <div className="w-full flex items-center justify-center text-slate-800 bg-slate-200 p-6 text-center">
+          {/* ========== CONTENEDOR RESPONSIVO PARA FECHA Y COUNTDOWN ========== */}
+          {/* He cambiado gap-4 a gap-8 para mayor separación */}
+          <div className="w-full max-w-6xl flex flex-col lg:flex-row items-stretch gap-14">
+            {/* RECTÁNGULO DE LA FECHA */}
+            <div className="w-full lg:w-1/2 bg-white/20 backdrop-blur-lg flex items-center justify-center text-white p-6 rounded-2xl shadow-2xl border border-white/30">
               <p className="text-3xl sm:text-5xl font-extrabold font-primary">
-                June 14 - 15, 2025
+                August 16 - 17, 2025
               </p>
             </div>
-          ) : (
-            <div className="mt-6 flex w-full max-w-4xl rounded-lg shadow-2xl overflow-hidden">
-              <div className="w-full bg-slate-200 flex items-center justify-center text-slate-800 p-6">
-                <p className="text-3xl sm:text-5xl font-extrabold font-primary">
-                  June 14 - 15, 2025
-                </p>
-              </div>
-              <div className="w-1/2 bg-slate-800 flex items-center justify-center p-6">
-                <div className="flex space-x-4 text-3xl text-slate-200 font-bold">
-                  <CountdownBox label="Days" value={timeLeft.days} />
-                  <span>:</span>
-                  <CountdownBox label="Hours" value={timeLeft.hours} />
-                  <span>:</span>
-                  <CountdownBox label="Minutes" value={timeLeft.minutes} />
-                  <span>:</span>
-                  <CountdownBox label="Seconds" value={timeLeft.seconds} />
-                </div>
+
+            {/* RECTÁNGULO DEL COUNTDOWN */}
+            <div className="w-full lg:w-1/2 bg-blue-950/40 backdrop-blur-lg flex items-center justify-center p-6 rounded-2xl shadow-2xl border border-white/30">
+              <div className="flex space-x-4 text-3xl text-slate-200 font-bold">
+                <CountdownBox label="Days" value={timeLeft.days} />
+                <span>:</span>
+                <CountdownBox label="Hours" value={timeLeft.hours} />
+                <span>:</span>
+                <CountdownBox label="Minutes" value={timeLeft.minutes} />
+                <span>:</span>
+                <CountdownBox label="Seconds" value={timeLeft.seconds} />
               </div>
             </div>
-          )}
+          </div>
 
           {/* Botón de Registro solo en pantallas pequeñas */}
           {isSmallScreen && (

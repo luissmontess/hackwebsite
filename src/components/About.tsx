@@ -1,108 +1,142 @@
-import PathDrawBox from "./PathDrawBox"
+import PathDrawBox from "./PathDrawBox";
 import MemberCard from "./MemberCard";
-import { useState } from "react"
+import { useState } from "react";
 
 export default function About() {
-    const [selectedTab, setSelectedTab] = useState<"info" | "tecbytes">("info");
-    const boardMembers = [
-        {
-          name: "Luis Montes",
-          role: "President",
-          image_name: `members/luismontes_member.png`,
-          description: "Leader of TecBytes, responsible for organizing events and managing the team."
-        },
-        {
-          name: "Joselyn Espinoza",
-          role: "Vice President",
-          image_name: `members/joss.jpeg`,
-          description: "Supports the president and oversees club initiatives and outreach."
-        },
-        {
-            name: "Armando Mac Beath",
-            role: "HackPue Organizer",
-            image_name: `members/armando.jpg`,
-            description: "Main responsable on the organization of the hack, as well as answering all your doubts."
-          },
-        {
-          name: "Alejandro Zurita",
-          role: "Treasurer",
-          image_name: `members/zurita.jpeg`,
-          description: "Manages the financial aspects of TecBytes, including sponsorships and budgeting."
-        },
-        {
-          name: "Antonieta Rodriguez",
-          role: "Social Responsiblity Lead",
-          image_name: `members/anto.jpeg`,
-          description: "Handles social media, branding, and promotional campaigns for TecBytes."
-        },
-        // {
-        //   name: "Ivonne Hernández",
-        //   role: "Public Relations",
-        //   image_name: `luismontes_member.png`,
-        //   description: "Oversees software development and technical projects within TecBytes."
-        // }
-    ];
-    
-    return (
-        <section
-            id="about"
-            className="min-h-screen flex flex-col items-center justify-center text-center px-4 sm:px-8 py-16 bg-slate-800"
+  const [selectedTab, setSelectedTab] = useState<"info" | "tecbytes">("info");
+
+  const boardMembers = [
+    {
+      name: "Armando Mac Beath",
+      role: "President",
+      image_name: `members/armandPres.jpg`,
+      description:
+        "Provides strategic leadership for TecBytes, defines vision and goals, and represents the organization in external partnerships and events.",
+      linkedin: "https://www.linkedin.com/in/armando-mac-beath-430648250",
+    },
+    {
+      name: "Maria Jose Croche",
+      role: "Vice President",
+      image_name: `members/majoVIce.jpg`,
+      description:
+        "Assists the President in decision-making, coordinates club initiatives, and ensures seamless execution of outreach programs.",
+      linkedin: "https://www.linkedin.com/in/majosecroche/",
+    },
+    {
+      name: "Oriana Cañizales",
+      role: "Finance Lead",
+      image_name: `members/oriFin.jpg`,
+      description:
+        "Oversees financial planning, budgeting, and sponsorship management to ensure TecBytes' fiscal health and sustainability.",
+      linkedin:
+        "https://www.linkedin.com/in/oriana-isabella-ca%C3%B1izales-hern%C3%A1ndez-7a8882291/",
+    },
+    {
+      name: "Ximena Ortiz",
+      role: "Social Responsibility Lead",
+      image_name: `members/ximeResp.jpg`,
+      description:
+        "Designs and implements community engagement and CSR projects, fostering social impact and volunteer initiatives.",
+      linkedin: "https://www.linkedin.com/in/ximena-ortiz-g%C3%B3mez/",
+    },
+    {
+      name: "Luis Antonio Salinas",
+      role: "Projects Lead",
+      image_name: `members/luisProyectos.jpg`,
+      description:
+        "Plans, oversees, and delivers technical and social projects, coordinating teams to achieve project milestones.",
+      linkedin: "https://www.linkedin.com/in/luis-antonio-salinas/",
+    },
+    {
+      name: "Amir Rodriguez",
+      role: "Youth Outreach Lead",
+      image_name: `members/youth.jpg`,
+      description:
+        "Develops mentorship and recruitment programs, building relationships with youth to expand TecBytes' community impact.",
+      linkedin:
+        "https://www.linkedin.com/in/santiago-amir-rodriguez-gonzalez/",
+    },
+    {
+      name: "Luis Montes",
+      role: "Senior Advisor",
+      image_name: `members/montesAdvisor.jpg`,
+      description:
+        "Provides strategic counsel and mentorship to the executive team, leveraging experience to guide long-term growth.",
+      linkedin: "https://www.linkedin.com/in/luismontess/",
+    },
+  ];
+
+  return (
+    <section
+      id="about"
+      className="
+        min-h-screen
+        flex flex-col items-center
+        justify-start     
+        text-center
+        px-4 sm:px-8 py-16
+        bg-slate-800
+      "
+    >
+      {/* Tab Buttons */}
+      <div className="mb-6 space-x-4">
+        <button
+          onClick={() => setSelectedTab("info")}
+          className={`px-6 py-2 rounded-lg transition-all ${
+            selectedTab === "info"
+              ? "bg-blue-500 text-white"
+              : "bg-gray-700 text-gray-300 hover:bg-gray-600"
+          }`}
         >
-            {/* Buttons to Switch Content (Now Outside the PathDrawBox) */}
-            <div className="mb-6 space-x-4">
-                <button
-                onClick={() => setSelectedTab("info")}
-                className={`px-6 py-2 rounded-lg transition-all ${
-                    selectedTab === "info"
-                    ? "bg-blue-500 text-white"
-                    : "bg-gray-700 text-gray-300 hover:bg-gray-600"
-                }`}
-                >
-                    Info
-                </button>
-                <button
-                onClick={() => setSelectedTab("tecbytes")}
-                className={`px-6 py-2 rounded-lg transition-all ${
-                    selectedTab === "tecbytes"
-                    ? "bg-blue-500 text-white"
-                    : "bg-gray-700 text-gray-300 hover:bg-gray-600"
-                }`}
-                >
-                TecBytes
-                </button>
-            </div>
+          Info
+        </button>
+        <button
+          onClick={() => setSelectedTab("tecbytes")}
+          className={`px-6 py-2 rounded-lg transition-all ${
+            selectedTab === "tecbytes"
+              ? "bg-blue-500 text-white"
+              : "bg-gray-700 text-gray-300 hover:bg-gray-600"
+          }`}
+        >
+          TecBytes
+        </button>
+      </div>
 
-            {selectedTab === "info" && (
-                <PathDrawBox strokeColor="white" strokeWidth={10} duration={2}>
-                    <div className="p-10">
-                    <h2 className="text-4xl font-bold text-white mb-6">
-                        What is Hack Puebla?
-                    </h2>
-                    <p className="text-lg max-w-2xl text-gray-50">
-                    Hack Puebla is a programming and entrepreneurship competition where students, 
-                    professionals, and technology enthusiasts come together to create innovative 
-                    solutions to today's most pressing problems. Join us and put your creativity to the test!</p>
-                    </div>
-                </PathDrawBox>
-            )}
+      {selectedTab === "info" && (
+        <PathDrawBox strokeColor="white" strokeWidth={10} duration={2}>
+          <div className="p-10">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              What is Hack Puebla?
+            </h2>
+            <p className="text-lg max-w-2xl text-gray-50">
+              Hack Puebla is a programming and entrepreneurship competition where
+              students, professionals, and technology enthusiasts come together
+              to create innovative solutions to today's most pressing problems.
+              Join us and put your creativity to the test!
+            </p>
+          </div>
+        </PathDrawBox>
+      )}
 
-            {selectedTab === "tecbytes" && (
-                <div>
-                    <h3 className="text-2xl font-semibold text-white mb-4">TecBytes Board Members</h3>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-                    {boardMembers.map((member, index) => (
-                        <MemberCard key={index} 
-                            name={member.name}
-                            role={member.role}
-                            image_name={member.image_name}
-                            description={member.description}
-                        />
-                    ))}
-                    </div>
-                </div>
-            )}
-
-            
-        </section>
-    )
+      {selectedTab === "tecbytes" && (
+        <div className="w-full max-w-6xl">
+          <h3 className="text-2xl font-semibold text-white mb-4">
+            TecBytes Board Members
+          </h3>
+          <div className="flex flex-wrap justify-center gap-6">
+            {boardMembers.map((member, idx) => (
+              <MemberCard
+                key={idx}
+                name={member.name}
+                role={member.role}
+                image_name={member.image_name}
+                description={member.description}
+                linkedin={member.linkedin}
+              />
+            ))}
+          </div>
+        </div>
+      )}
+    </section>
+  );
 }

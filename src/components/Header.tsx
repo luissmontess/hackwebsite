@@ -49,7 +49,7 @@ const Header = () => {
             {/* Registration Button */}
             <li>
               <div
-                className="px-4 py-1 bg-blue-500 text-white font-bold rounded-lg hover:bg-blue-600 transition block"
+                className={`px-4 py-1 bg-blue-500 text-white font-bold rounded-lg hover:bg-blue-600 transition block`}
                 
               >
                 <a href="https://events.mlh.io/events/12506-hackpue" target="_blank">

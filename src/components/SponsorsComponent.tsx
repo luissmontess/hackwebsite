@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { staggerContainer, fadeIn } from "../utils/motion";
-import { Tilt } from "react-tilt"
 
 export default function SponsorsComponent() {
     const sponsors = [
@@ -38,7 +37,6 @@ export default function SponsorsComponent() {
                         target="_blank" 
                         rel="noopener noreferrer"
                     >
-                        <Tilt>
                             <motion.div
                                 variants={fadeIn("up", "tween", 0.5 + index * 0.1, 1)}
                                 className="bg-white shadow-xl p-6 rounded-lg flex items-center justify-center w-full h-40"
@@ -49,7 +47,6 @@ export default function SponsorsComponent() {
                                     className="max-w-full max-h-full object-contain"
                                 />
                             </motion.div>
-                        </Tilt>
                     </a>
                 ))}
             </div>
