@@ -1,3 +1,5 @@
+// src/App.tsx
+
 import React, { useEffect, useState } from 'react';
 import TalaveraBackground from './components/TalaveraBackground';
 import Header from './components/Header';
@@ -108,15 +110,21 @@ const App: React.FC = () => {
   return (
     <>
       <Header />
+
       <MLHTrustBadge isSmallScreen={isSmallScreen} />
 
-      {/* Hero Section */}
+      {/* Hero Section con mayor margen-top en móviles */}
       <TalaveraBackground>
         <section
           id="hero"
-          className="min-h-screen flex flex-col items-center justify-center text-center px-4 sm:px-8"
+          className="
+            mt-16        /* móvil: 4rem */
+            sm:mt-8      /* ≥640px: 2rem */
+            min-h-screen
+            flex flex-col items-center justify-center text-center
+            px-4 sm:px-8
+          "
         >
-          <div className="mt-10"></div>
           {/* LOGO CON FONDO DE VIDRIO */}
           <div className="p-4 bg-white/20 backdrop-blur-lg rounded-2xl shadow-2xl border border-white/30 mb-6">
             <img
@@ -127,7 +135,6 @@ const App: React.FC = () => {
           </div>
 
           {/* ========== CONTENEDOR RESPONSIVO PARA FECHA Y COUNTDOWN ========== */}
-          {/* He cambiado gap-4 a gap-8 para mayor separación */}
           <div className="w-full max-w-6xl flex flex-col lg:flex-row items-stretch gap-14">
             {/* RECTÁNGULO DE LA FECHA */}
             <div className="w-full lg:w-1/2 bg-white/20 backdrop-blur-lg flex items-center justify-center text-white p-6 rounded-2xl shadow-2xl border border-white/30">
@@ -150,7 +157,7 @@ const App: React.FC = () => {
             </div>
           </div>
 
-          {/* Botón de Registro solo en pantallas pequeñas */}
+          {/* Botón de Registro sólo en pantallas pequeñas */}
           {isSmallScreen && (
             <a
               href="https://events.mlh.io/events/12506-hackpue"
