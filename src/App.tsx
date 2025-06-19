@@ -7,7 +7,6 @@ import Schedule from './components/Schedule';
 import CountdownBox from './components/CountdownBox';
 import Faq from './components/Faq';
 import SponsorsComponent from './components/SponsorsComponent';
-import LiquidGlass from 'liquid-glass-react';
 import './App.css';
 
 // Definimos la estructura del tiempo restante

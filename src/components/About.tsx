@@ -3,7 +3,8 @@ import MemberCard from "./MemberCard";
 import { useState } from "react";
 
 export default function About() {
-  const [selectedTab, setSelectedTab] = useState<"info" | "tecbytes">("info");
+  const [selectedTab, setSelectedTab] =
+    useState<"info" | "tecbytes">("info");
 
   const boardMembers = [
     {
@@ -69,16 +70,17 @@ export default function About() {
   return (
     <section
       id="about"
-      className="
-        min-h-screen
-        flex flex-col items-center
-        justify-start     
-        text-center
+      className={`
+        flex flex-col items-center text-center
         px-4 sm:px-8 py-16
         bg-slate-800
-      "
+        ${selectedTab === "info"
+          ? "min-h-screen justify-center"
+          : ""
+        }
+      `}
     >
-      {/* Tab Buttons */}
+      {/* Tab Switch */}
       <div className="mb-6 space-x-4">
         <button
           onClick={() => setSelectedTab("info")}
@@ -109,10 +111,10 @@ export default function About() {
               What is Hack Puebla?
             </h2>
             <p className="text-lg max-w-2xl text-gray-50">
-              Hack Puebla is a programming and entrepreneurship competition where
-              students, professionals, and technology enthusiasts come together
-              to create innovative solutions to today's most pressing problems.
-              Join us and put your creativity to the test!
+              Hack Puebla is a programming and entrepreneurship competition
+              where students, professionals, and technology enthusiasts come
+              together to create innovative solutions to today's most pressing
+              problems. Join us and put your creativity to the test!
             </p>
           </div>
         </PathDrawBox>
@@ -124,17 +126,24 @@ export default function About() {
             TecBytes Board Members
           </h3>
           <div className="flex flex-wrap justify-center gap-6">
-            {boardMembers.map((member, idx) => (
+            {boardMembers.map((m, i) => (
               <MemberCard
-                key={idx}
-                name={member.name}
-                role={member.role}
-                image_name={member.image_name}
-                description={member.description}
-                linkedin={member.linkedin}
+                key={i}
+                name={m.name}
+                role={m.role}
+                image_name={m.image_name}
+                description={m.description}
+                linkedin={m.linkedin}
               />
             ))}
           </div>
+
+          {/* — Group Photo Below — */}
+          <img
+            src="members/groupPic.jpg"
+            alt="TecBytes Group Photo"
+            className="mt-8 w-full max-w-4xl rounded-lg shadow-lg mx-auto"
+          />
         </div>
       )}
     </section>

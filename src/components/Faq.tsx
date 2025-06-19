@@ -1,5 +1,4 @@
 import { useState } from "react";
-import LiquidGlass from "liquid-glass-react";
 
 const faqs = [
     {

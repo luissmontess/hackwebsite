@@ -20,7 +20,7 @@ export const textVariant = (delay: number): Variants => {
 
 export const fadeIn = (
   direction: "left" | "right" | "up" | "down",
-  type: string,
+  type: "spring" | "tween" | "inertia" | "keyframes",
   delay: number,
   duration: number
 ): Variants => {
@@ -65,7 +65,7 @@ export const zoomIn = (delay: number, duration: number): Variants => {
 
 export const slideIn = (
   direction: "left" | "right" | "up" | "down",
-  type: string,
+  type: "spring" | "tween" | "inertia" | "keyframes",
   delay: number,
   duration: number
 ): Variants => {
