@@ -1,17 +1,40 @@
+// helpers/shape_functions.ts
+
 const shapes = ["circle", "square", "triangle", "rhombus"];
 
-// Helper to generate random colors
-const getRandomColor = () => {
-    const colors = ["#003640", "#002930", "#001b208", "#014450", "#01525f"];
-    return colors[Math.floor(Math.random() * colors.length)];
-};
+const TALAVERA_PALETTE = [
+    { main: "#01525f", shadow: "#014450" },
+    { main: "#014450", shadow: "#003640" },
+    { main: "#003640", shadow: "#002930" },
+    { main: "#002930", shadow: "#001B20" },
+    { main: "#001B20", shadow: "#001014" },
+];
 
-// Generate random shapes for a grid
-export const generateShapeGrid = (rows: number, cols: number) => {
+// --- ADD THIS ---
+// The probability of a cell being empty. 0.2 means a 20% chance.
+const EMPTY_CELL_PROBABILITY = 0.25; 
+
+export const generateShapeGrid = (rows: number, cols: number) => {    
     const grid = [];
     for (let i = 0; i < rows * cols; i++) {
-        const shape = shapes[Math.floor(Math.random() * shapes.length)];
-        grid.push({ id: i, shape, color: getRandomColor() });
+        
+        // --- MODIFY THIS PART ---
+        // Decide if the current cell should be empty
+        if (Math.random() < EMPTY_CELL_PROBABILITY) {
+            // If so, push `null` to represent an empty cell
+            grid.push(null); 
+        } else {
+            // Otherwise, generate a shape as before
+            const shape = shapes[Math.floor(Math.random() * shapes.length)];
+            const randomColorPair = TALAVERA_PALETTE[Math.floor(Math.random() * TALAVERA_PALETTE.length)];
+            
+            grid.push({
+                id: `shape-${i}`,
+                shape,
+                color: randomColorPair.main,
+                backFaceColor: randomColorPair.shadow,
+            });
+        }
     }
     return grid;
 };

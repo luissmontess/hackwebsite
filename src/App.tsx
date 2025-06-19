@@ -128,7 +128,7 @@ const App: React.FC = () => {
           {/* LOGO CON FONDO DE VIDRIO */}
           <div className="p-4 bg-white/20 backdrop-blur-lg rounded-2xl shadow-2xl border border-white/30 mb-6">
             <img
-              src="logo_hack_est.png"
+              src="logo_hack.png"
               alt="TecBytes Logo"
               className="mx-auto w-72 sm:w-96"
             />

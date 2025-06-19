@@ -1,11 +1,13 @@
 import PathDrawBox from "./PathDrawBox";
 import MemberCard from "./MemberCard";
 import { useState } from "react";
+import DecryptedText from "./utils/DecryptedText";
 
 export default function About() {
   const [selectedTab, setSelectedTab] =
     useState<"info" | "tecbytes">("info");
-
+  const textDecryptTime = 30;
+  const titleDecryptTime = 60;
   const boardMembers = [
     {
       name: "Armando Mac Beath",
@@ -108,13 +110,41 @@ export default function About() {
         <PathDrawBox strokeColor="white" strokeWidth={10} duration={2}>
           <div className="p-10">
             <h2 className="text-4xl font-bold text-white mb-6">
-              What is Hack Puebla?
+            <DecryptedText
+              text="What is Hack Puebla?"
+              animateOn="view"
+              sequential
+              speed={titleDecryptTime}
+              encryptedClassName="text-4xl font-bold text-white mb-6"
+            />
             </h2>
             <p className="text-lg max-w-2xl text-gray-50">
-              Hack Puebla is a programming and entrepreneurship competition
-              where students, professionals, and technology enthusiasts come
-              together to create innovative solutions to today's most pressing
-              problems. Join us and put your creativity to the test!
+              <DecryptedText
+              text=" Hack Puebla is a programming and entrepreneurship competition
+              where students,"
+              animateOn="view"
+              sequential
+              speed={textDecryptTime}
+              encryptedClassName="text-lg max-w-2xl text-gray-50"
+            />
+              <DecryptedText
+              text="professionals, and technology enthusiasts come
+              together to create innovative 
+              where students,"
+              animateOn="view"
+              sequential
+              speed={textDecryptTime}
+              encryptedClassName="text-lg max-w-2xl text-gray-50"
+            />
+              <DecryptedText
+              text="solutions to today's most pressing
+              problems. Join us and put your creativity to the test!"
+              animateOn="view"
+              sequential
+              speed={textDecryptTime}
+              encryptedClassName="text-lg max-w-2xl text-gray-50"
+            />
+              
             </p>
           </div>
         </PathDrawBox>
