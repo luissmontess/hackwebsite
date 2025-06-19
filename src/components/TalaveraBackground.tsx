@@ -30,7 +30,7 @@ const TalaveraBackground = ({ children }: { children: React.ReactNode }) => {
             }
         };
         updateGrid();
-        window.addEventListener("resize", updateGrid);
+        // window.addEventListener("resize", updateGrid);
         return () => window.removeEventListener("resize", updateGrid);
     }, []);
 
