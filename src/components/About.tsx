@@ -7,7 +7,7 @@ export default function About() {
   const [selectedTab, setSelectedTab] =
     useState<"info" | "tecbytes">("info");
   const textDecryptTime = 30;
-  const titleDecryptTime = 60;
+  const titleDecryptTime = 100;
   const boardMembers = [
     {
       name: "Armando Mac Beath",
@@ -120,25 +120,21 @@ export default function About() {
             </h2>
             <p className="text-lg max-w-2xl text-gray-50">
               <DecryptedText
-              text=" Hack Puebla is a programming and entrepreneurship competition
-              where students,"
+              text=" Hack Puebla is a programming and entrepreneurship competition where students,"
               animateOn="view"
               sequential
               speed={textDecryptTime}
               encryptedClassName="text-lg max-w-2xl text-gray-50"
             />
               <DecryptedText
-              text="professionals, and technology enthusiasts come
-              together to create innovative 
-              where students,"
+              text=" professionals, and technology enthusiasts come together to create innovative "
               animateOn="view"
               sequential
               speed={textDecryptTime}
               encryptedClassName="text-lg max-w-2xl text-gray-50"
             />
               <DecryptedText
-              text="solutions to today's most pressing
-              problems. Join us and put your creativity to the test!"
+              text="solutions to today's most pressing problems. Join us and put your creativity to the test!"
               animateOn="view"
               sequential
               speed={textDecryptTime}
