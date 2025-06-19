@@ -6,7 +6,7 @@ import DecryptedText from "./utils/DecryptedText";
 export default function About() {
   const [selectedTab, setSelectedTab] =
     useState<"info" | "tecbytes">("info");
-  const textDecryptTime = 30;
+  const textDecryptTime = 20;
   const titleDecryptTime = 100;
   const boardMembers = [
     {
@@ -108,7 +108,7 @@ export default function About() {
 
       {selectedTab === "info" && (
         <PathDrawBox strokeColor="white" strokeWidth={10} duration={2}>
-          <div className="p-10">
+          <div className="p-10 max-w-[800px]">
             <h2 className="text-4xl font-bold text-white mb-6">
             <DecryptedText
               text="What is Hack Puebla?"
@@ -118,23 +118,23 @@ export default function About() {
               encryptedClassName="text-4xl font-bold text-white mb-6"
             />
             </h2>
-            <p className="text-lg max-w-2xl text-gray-50">
+            <p className="text-lg pt-10 max-w-2xl text-gray-50">
               <DecryptedText
-              text=" Hack Puebla is a programming and entrepreneurship competition where students,"
+              text=" Hack Puebla is a programming and entrepreneurship competition where "
               animateOn="view"
               sequential
               speed={textDecryptTime}
               encryptedClassName="text-lg max-w-2xl text-gray-50"
             />
               <DecryptedText
-              text=" professionals, and technology enthusiasts come together to create innovative "
+              text="students, professionals, and technology enthusiasts come together to create "
               animateOn="view"
               sequential
               speed={textDecryptTime}
               encryptedClassName="text-lg max-w-2xl text-gray-50"
             />
               <DecryptedText
-              text="solutions to today's most pressing problems. Join us and put your creativity to the test!"
+              text="innovative solutions to today's most pressing problems. Join us and put your creativity to the test!"
               animateOn="view"
               sequential
               speed={textDecryptTime}

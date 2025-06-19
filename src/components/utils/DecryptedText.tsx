@@ -198,13 +198,21 @@ export default function DecryptedText({
     return (
         <motion.span
             ref={containerRef}
-            className={`inline-block whitespace-pre-wrap ${parentClassName}`}
+            className={`relative inline-block whitespace-pre-wrap ${parentClassName}`}
             {...hoverProps}
             {...props}
         >
-            <span className="sr-only">{displayText}</span>
+            <span
+                aria-hidden="true"
+                className={`invisible ${className}`}
+            >
+                {text}
+            </span>
 
-            <span aria-hidden="true">
+            <span
+                aria-hidden="true"
+                className="absolute top-0 left-0"
+            >
                 {displayText.split('').map((char, index) => {
                     const isRevealedOrDone =
                         revealedIndices.has(index) || !isScrambling || !isHovering;
@@ -219,6 +227,8 @@ export default function DecryptedText({
                     );
                 })}
             </span>
+            
+            <span className="sr-only">{text}</span>
         </motion.span>
     );
 }
