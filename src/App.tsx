@@ -54,14 +54,13 @@ const MLHTrustBadge: React.FC<MLHTrustBadgeProps> = ({ isSmallScreen }) => {
     <a
       id="mlh-trust-badge"
       style={isSmallScreen ? styleSmall : styleLarge}
-      href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2025-season&utm_content=blue"
+      href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2026-season&utm_content=blue"
       target="_blank"
-      rel="noopener noreferrer"
     >
       <img
-        src="https://s3.amazonaws.com/logged-assets/trust-badge/2025/mlh-trust-badge-2025-blue.svg"
-        alt="Major League Hacking 2025 Hackathon Season"
-        style={{ width: '100%' }}
+        src="https://s3.amazonaws.com/logged-assets/trust-badge/2026/mlh-trust-badge-2026-blue.svg"
+        alt="Major League Hacking 2026 Hackathon Season"
+        style={{ width: "100%" }}
       />
     </a>
   );
